@@ -2,6 +2,16 @@
 require_once 'includes/config.php';
 
 try {
+    // Delete existing database file if it exists
+    if (file_exists('database/shada.db')) {
+        unlink('database/shada.db');
+    }
+
+    // Create database directory if it doesn't exist
+    if (!file_exists('database')) {
+        mkdir('database', 0777, true);
+    }
+
     // Read SQL file
     $sql = file_get_contents('db_setup.sql');
     
