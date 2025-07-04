@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/config.php';
 
-// Fetch all products
+// Fetch all products TTO JAXX
 $query = "SELECT id, name, description, price_dzd, main_image FROM products ORDER BY id DESC";
 $result = $connection->query($query);
 ?>
